@@ -3,28 +3,18 @@ header{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height:400px;
+  height:460px;
   width: 100%;
   flex-direction:column;
   background-color: #d89820;
   background-image: url("https://www.transparenttextures.com/patterns/cloth-alike.png");
-  /* position: absolute;
-  top: 120px; */
 }
 
-.user-name{
-  /* position: absolute; 
-   left: 50%;
-  transform: translate(-50%, 0);
-  top: 45%; */
-  /* margin-top: 25%; */
+header h2{
+margin: 0;
 }
 header img{
-  /* position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  top: 17%; */
-  margin-top: 50%;
+padding-top: 5em;
 }
 
 
