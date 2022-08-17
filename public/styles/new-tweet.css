@@ -88,10 +88,13 @@ font-size:1.5em ;
   width: 5%;
 }
 .userInfo a{
- /* position: absolute;
- top:15%;
- left:85%; */
+  margin-top: -5%;
  color: #CBCDDC;
-  margin-right: 1em;
+  /* margin-left: 35em;
+  marg */
   font-size: 1.25rem;
+}
+.tweet-container span{
+  font-size: 1rem;
+  margin-bottom: -30%;
 }
