@@ -22,8 +22,8 @@ flex-grow: 2
 }
 
 .new-tweet{
-position: absolute;
-top: 500px;
+/* position: absolute;
+top: 500px; */
 }
 
 #tweet-text {
@@ -38,9 +38,9 @@ top: 500px;
 }
 
 .tweet-container{
-  position: absolute;
+  /* position: absolute; */
   margin :1em 1em 2em 1em;
-  top: 800px;
+  /* top: 800px; */
   border: 3px solid #545149;
   width: 75%;
   margin: 1em;
@@ -88,9 +88,9 @@ font-size:1.5em ;
   width: 5%;
 }
 .userInfo a{
- position: absolute;
+ /* position: absolute;
  top:15%;
- left:85%;
+ left:85%; */
  color: #CBCDDC;
   margin-right: 1em;
   font-size: 1.25rem;
