@@ -1,12 +1,16 @@
 $(document).ready(function() {
   let numberOfchar = 0;
+  
 
   const $input = $('#tweet-text');
   const $counter = $('.counter');
 
   $input.keypress(function() {
-    $counter.text(numberOfchar += 1);
-    numberOfchar > 140 ? $counter.css('color','red') : null;
+    numberOfchar += 1;
+    let available = 140 - (numberOfchar);
+
+    numberOfchar > 140 ? $counter.text(available) && $counter.addClass('counterRed') : $counter.text(numberOfchar += 1);
+  
   });
 });
 
