@@ -34,7 +34,7 @@
       referrerpolicy="no-referrer"
     />
 
-        <!-- External JS -->
+    <!-- External JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- JQuary-->
@@ -51,7 +51,7 @@
       <span>tweeter</span>
       <div>
         <p><strong>Write</strong> a new tweet</p>
-        <i class="fa-solid fa-angles-down"></i>
+        <i class="fa-solid fa-angles-down fa-sm"></i>
       </div>
     </nav>
 
@@ -61,7 +61,7 @@
       </div>
       <br />
       <div class="user-name">
-        <h2>Your Name</h2>
+        <h2>Bahar Hosseini</h2>
       </div>
     </header>
 
@@ -69,17 +69,30 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <!-- <form method="POST" action="/tweets/"> -->
+        <form method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" rows="1" cols="60"></textarea>
+          <textarea name="text" id="tweet-text" rows="1" cols="65"></textarea>
           <div>
             <button id="btn" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">  </output>
           </div>
-        <!-- </form> -->
+        </form>
+      </section>
+      <section class="tweet-container">
+        <article>
+          <h3>Bahar Hosseini</h3>
+          <p>hello world</p>
+          <div>
+            <i class="fa-solid fa-flag fa-2xs"></i>
+            <i class="fa-solid fa-repeat fa-2xs"></i>
+            <i class="fa-solid fa-heart fa-2xs"></i>
+          </div>
+    
+        </article>
       </section>
     </main>
   </head>  
+
 
 
         <!-- App JS -->

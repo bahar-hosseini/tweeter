@@ -5,7 +5,6 @@ $(document).ready(function() {
   const $counter = $('.counter');
 
   $input.keypress(function() {
-
     $counter.text(numberOfchar += 1);
     numberOfchar > 140 ? $counter.css('color','red') : null;
   });
