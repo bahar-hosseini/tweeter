@@ -7,9 +7,9 @@ $(document).ready(function() {
 
   $input.keypress(function() {
     numberOfchar += 1;
-    let available = 140 - (numberOfchar);
+    let characterRemaining = 140 - numberOfchar;
 
-    numberOfchar > 140 ? $counter.text(available) && $counter.addClass('counterRed') : $counter.text(numberOfchar += 1);
+    numberOfchar > 140 ? $counter.text(characterRemaining) && $counter.addClass('counterRed') : $counter.text(numberOfchar);
   
   });
 });
