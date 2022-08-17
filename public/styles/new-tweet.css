@@ -1,0 +1,32 @@
+main button{
+background-color: #4056A1;
+color:#FFFFFF;
+margin: 0.5em;
+border-radius: 10px;
+border-color: #4056A1;
+font-family: 'Bungee', cursive;
+font-size: 1rem;
+padding: 0.25em;
+flex-grow: 2
+}
+
+.counter{
+  /* justify-content: flex-end; */
+  margin-left:80%;
+}
+
+main section{
+position: absolute;
+top: 500px;
+}
+
+#tweet-text {
+  border: none;
+  border-bottom: 2px solid #545149;
+  background-color: #f4f1ec;
+  padding-top: 1.5em;
+  margin-bottom: .75em;
+  resize: none;
+  width: 100%;
+  outline: none;
+}

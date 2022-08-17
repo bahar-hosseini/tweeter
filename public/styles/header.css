@@ -1,0 +1,31 @@
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height:400px;
+  width: 100%;
+  background-color: #d89820;
+  background-image: url("https://www.transparenttextures.com/patterns/cloth-alike.png");
+  position: absolute;
+  top: 120px;
+}
+
+.user-name{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 60%;
+}
+header img{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 1%;
+}
+
+
+
+
+
+

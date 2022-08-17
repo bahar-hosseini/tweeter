@@ -1,0 +1,31 @@
+nav{
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  display:flex;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  color:#FFFFFF;
+  padding: 0 1.5em;
+  /* justify-content: space-between; */
+  align-items:center;
+  z-index: 1;
+}
+
+nav span{
+  font-family: 'Bungee', cursive;
+  flex-grow: 1;
+}
+nav > div > p{
+  font-family: 'Source Sans Pro', sans-serif;
+margin-bottom: 0;
+
+
+}
+
+nav  div  i{
+color: #F03C1D;
+position: absolute;
+right: 9%;
+}
