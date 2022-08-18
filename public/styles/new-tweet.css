@@ -102,7 +102,7 @@ float: right;
   marg */
   font-size: 1.25rem;
 }
-.tweet-container span{
+.tweet-container .timeago{
   font-size: 1rem;
   margin-bottom: 1em;
 }

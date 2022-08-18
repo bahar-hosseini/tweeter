@@ -33,7 +33,7 @@ const createTweetElement = (tweetObj) =>{
     <i class="fa-solid fa-repeat fa-2xs"></i>
     <i class="fa-solid fa-heart fa-2xs"></i>
   </div>
-  <span class="need_to_be_rendered" datetime="2022-08-18T01:48:17Z"> ${timeago.format(new Date())}</span>
+  <time class="timeago" datetime="2008-07-17T09:24:17Z">${timeago.format(tweetObj.created_at)}</time>
 </article>
 </section>`);
 
@@ -80,13 +80,13 @@ $tweetForm.submit((event)=>{
    
   }
 
+  
 
   $.ajax({
     type: 'POST',
     url:'/tweets',
     data: $tweetForm.serialize(),
     success :(res)=>{
-
       window.location.reload(true);
     },
     error:()=>{
@@ -101,14 +101,16 @@ $tweetForm.submit((event)=>{
  **/
 $(document).ready(function() {
 
+  
   const loadTweets = () =>{
     $.ajax({
       type:'Get',
       url:'/tweets',
-
-      success :(resp)=>{
       
+      success :(resp)=>{
+        
         renderTweets(resp);
+        $("time.timeago").timeago();
       },
       error:(err)=>{
         console.log(err);

@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   const $input = $('#tweet-text');
   const $counter = $('.counter');
-  $input.keypress(function() {
+  $input.keyup(function() {
     numberOfchar += 1;
     let characterRemaining = 140 - numberOfchar;
 
