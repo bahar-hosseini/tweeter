@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const mockDb = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1660609135613
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1660695535613
-  }
-];
-
-
 const createTweetElement = (tweetObj) =>{
   let $tweet = (` <section class="tweet-container">
     <article id="tweet">
@@ -64,19 +38,17 @@ const renderTweets = (arrTweetObj)=>{
 
 
 };
-renderTweets(mockDb);
 
 
 
 
-
-const $tweetForm = $('form');
-const $textAreaField = $('#tweet-text');
-
-
-
+/**
+ * Post request using ajax
+ **/
+ const $tweetForm = $('form');
 $tweetForm.submit((event)=>{
   event.preventDefault();
+  const $textAreaField = $('#tweet-text');
   const $inputTerm = $textAreaField.val();
   const url = $tweetForm.attr("action");
 
@@ -85,15 +57,36 @@ $tweetForm.submit((event)=>{
     url:'/tweets',
     data: $tweetForm.serialize(),
     success :(resp)=>{
-      console.log('test',resp);
+
     },
     error:()=>{
       console.error();
     },
   });
-
 });
 
+
+$(document).ready(function() {
+
+  const loadTweets = () =>{
+    $.ajax({
+      type:'Get',
+      url:'/tweets',
+
+      success :(resp)=>{
+        console.log(resp);
+
+        return renderTweets(resp);
+      },
+      error:(err)=>{
+        console.log(err);
+      },
+
+    });
+
+  };
+  loadTweets();
+});
 
 
 
