@@ -1,7 +1,7 @@
 main button{
 background-color: #4056A1;
 color:#FFFFFF;
-margin-bottom: 1em;
+margin : 0 1em 2em 1em;
 border-radius: 5px;
 border-color: #4056A1;
 font-family: 'Bungee', cursive;
@@ -31,26 +31,28 @@ top: 500px; */
   border-bottom: 3px solid #545149;
   background-color: #f4f1ec;
   padding-top: 1.25em;
-  margin-bottom: .75em;
+  margin :1em;
+  /* margin-bottom: .75em; */
   resize: none;
-  width: 100%;
+  width: 75vw;
   outline: none;
 }
 
 .tweet-container{
   /* position: absolute; */
-  margin :1em 1em 2em 1em;
+  margin :0 1em;
   /* top: 800px; */
   border: 3px solid #545149;
-  width: 75%;
+  width: 75vw;
   margin: 1em;
 }
 
 
 
 .tweet-container p{
-  padding: 1em 1em 0 1em;
-  margin: 1em 1.5em 0.5em 1.5em;
+  /* padding: 1em 0em 0 1em; */
+  margin: 1em 1.5em;
+  /* align-items: center; */
   border-bottom: 3px solid #545149;
   width: 90%;
 }
@@ -68,7 +70,7 @@ color: #DAA520;
 
 article h3 {
   font-size: 1.5rem;
-  margin-left: 1rem;
+  margin:0.5em 0.5rem;
 }
 
 .font-awesome{
@@ -88,8 +90,9 @@ font-size:1.5em ;
   width: 5%;
 }
 .userInfo a{
-  margin-top: -5%;
+margin-right: 0.5em;
  color: #CBCDDC;
+float: right;
   /* margin-left: 35em;
   marg */
   font-size: 1.25rem;

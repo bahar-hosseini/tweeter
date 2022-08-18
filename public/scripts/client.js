@@ -21,11 +21,11 @@ const createTweetElement = (tweetObj) =>{
   let $tweet = (` <section class="tweet-container">
     <article id="tweet">
     <div class="userInfo">
+    <a>${escape(tweetObj.user.handle)}</a>
   <h3>
     <img src=${escape(tweetObj.user.avatars)}></img>
     ${escape(tweetObj.user.name)}
   </h3>
-  <a>${escape(tweetObj.user.handle)}</a>
 </div>
   <p>${escape(tweetObj.content.text)}</p>
   <div class="font-awesome">
@@ -72,6 +72,7 @@ $tweetForm.submit((event)=>{
 
   if (!$inputTerm) {
     $('.error').slideDown(400);
+
   }
   if ($inputTerm.length > 139) {
     $('.warning').slideDown(100);

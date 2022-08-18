@@ -4,7 +4,7 @@ header{
   justify-content: center;
   flex-wrap: wrap;
   height:460px;
-  width: 100%;
+  width: 100vw;
   flex-direction:column;
   background-color: #d89820;
   background-image: url("https://www.transparenttextures.com/patterns/cloth-alike.png");
