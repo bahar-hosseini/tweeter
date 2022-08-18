@@ -4,6 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
+/**
+ * A Function to create each tweet
+ **/
 const createTweetElement = (tweetObj) =>{
   let $tweet = (` <section class="tweet-container">
     <article id="tweet">
@@ -28,7 +32,9 @@ const createTweetElement = (tweetObj) =>{
 };
 
 
-
+/**
+ * A Function to render tweets
+ **/
 const renderTweets = (arrTweetObj)=>{
   let $tweet;
   for (const item of arrTweetObj) {
@@ -39,8 +45,6 @@ const renderTweets = (arrTweetObj)=>{
 
 
 };
-
-
 
 
 /**
@@ -56,7 +60,7 @@ $tweetForm.submit((event)=>{
   if (!$inputTerm) {
     alert("Please write sth before submit ⚠️");
   }
-  if($inputTerm.length>50){
+  if ($inputTerm.length > 50) {
     alert("Your tweet is too long");
   }
 
@@ -65,8 +69,9 @@ $tweetForm.submit((event)=>{
     type: 'POST',
     url:'/tweets',
     data: $tweetForm.serialize(),
-    success :(resp)=>{
+    success :(res)=>{
 
+      window.location.reload(true);
     },
     error:()=>{
       console.error();
@@ -86,46 +91,20 @@ $(document).ready(function() {
       url:'/tweets',
 
       success :(resp)=>{
-        console.log(resp);
-
-        return renderTweets(resp);
+      
+        renderTweets(resp);
       },
       error:(err)=>{
         console.log(err);
       },
 
     });
-
   };
   loadTweets();
+
+
 });
 
-
-
-
-
-
-
-// const $tweet = $(` <section class="tweet-container">
-//     <article id="tweet">
-//     <div class="userInfo">
-//   <h3>
-//     <img src='https://i.imgur.com/73hZDYK.png'></img>
-//     Bahar Hosseini
-//   </h3>
-//   <a>@irIsaac</a>
-// </div>
-//   <p>Test new Tweet</p>
-//   <div class="font-awesome">
-//     <i class="fa-solid fa-flag fa-2xs"></i>
-//     <i class="fa-solid fa-repeat fa-2xs"></i>
-//     <i class="fa-solid fa-heart fa-2xs"></i>
-//   </div>
-// </article>
-// </section>`);
-
-// Test / driver code (temporary)
-// console.log($tweet); // to see what it looks like
 
 
 
