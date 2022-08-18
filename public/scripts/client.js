@@ -4,6 +4,31 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const mockDb = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@SirIsaac"
+    },
+    "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+    "created_at": 1660609135613
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd"
+    },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1660695535613
+  }
+];
+
 
 const createTweetElement = (tweetObj) =>{
   let $tweet = (` <section class="tweet-container">
@@ -27,23 +52,19 @@ const createTweetElement = (tweetObj) =>{
   return $tweet;
 };
 
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-    "handle": "@SirIsaac"
-  },
-  "content": {
-    "text": "If I have seen further it is by standing on the shoulders of giants"
-  },
-  "created_at": 1461116232227
+
+
+const renderTweets = (arrTweetObj)=>{
+  let $tweet;
+  for (const item of arrTweetObj) {
+    $tweet = createTweetElement(item);
+
+  $('.main-container').prepend($tweet);
+  }
+
+
 };
-
-
-
-
-const $tweet = createTweetElement(tweetData);
-
+renderTweets(mockDb);
 
 // const $tweet = $(` <section class="tweet-container">
 //     <article id="tweet">
@@ -65,5 +86,4 @@ const $tweet = createTweetElement(tweetData);
 
 // Test / driver code (temporary)
 // console.log($tweet); // to see what it looks like
-$('.main-container').prepend($tweet);
 
