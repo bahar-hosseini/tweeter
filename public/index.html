@@ -35,8 +35,8 @@
     />
 
     <!-- External JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      </head>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
@@ -47,32 +47,30 @@
         <i class="fa-solid fa-angles-down fa-sm"></i>
       </div>
     </nav>
-    
+
     <header>
       <div>
         <img src="/images/profile-hex.png" />
         <h2>Bahar Hosseini</h2>
       </div>
       <br />
-
-
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets/">
+        <form action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" rows="1" cols="65"></textarea>
           <div>
             <button id="btn" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">  </output>
+            <output name="counter" class="counter" for="tweet-text"> </output>
           </div>
         </form>
       </section>
       <div class="main-container">
-      <section class="tweet-container">
+        <!-- <section class="tweet-container">
             <article id="tweet">
             <div class="userInfo">
           <h3>
@@ -91,16 +89,16 @@
           <span>10 days ago</span>
         </article>
 
-      </section>
-    </div>
+      </section> -->
+      </div>
     </main>
 
-
-
-
-        <!-- App JS -->
-        <script type="text/javascript" src="/scripts/client.js"></script>
-       <!-- composer-char-counter-js -->
-    <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <!-- composer-char-counter-js -->
+    <script
+      type="text/javascript"
+      src="./scripts/composer-char-counter.js"
+    ></script>
   </body>
 </html>

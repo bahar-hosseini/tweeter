@@ -4,7 +4,6 @@ $(document).ready(function() {
 
   const $input = $('#tweet-text');
   const $counter = $('.counter');
-
   $input.keypress(function() {
     numberOfchar += 1;
     let characterRemaining = 140 - numberOfchar;
@@ -29,7 +28,6 @@ $(document).ready(function() {
 
 // const $button = $('button');
 // $button.on('click',(e)=>{
-//   console.log('i got clicked');
 
 //   const $input = $('#tweet-text');
 //   const value = $input.val();

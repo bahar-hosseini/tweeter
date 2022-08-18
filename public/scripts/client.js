@@ -59,12 +59,47 @@ const renderTweets = (arrTweetObj)=>{
   for (const item of arrTweetObj) {
     $tweet = createTweetElement(item);
 
-  $('.main-container').prepend($tweet);
+    $('.main-container').prepend($tweet);
   }
 
 
 };
 renderTweets(mockDb);
+
+
+
+
+
+const $tweetForm = $('form');
+const $textAreaField = $('#tweet-text');
+
+
+
+$tweetForm.submit((event)=>{
+  event.preventDefault();
+  const $inputTerm = $textAreaField.val();
+  const url = $tweetForm.attr("action");
+
+  $.ajax({
+    type: 'POST',
+    url:'/tweets',
+    data: $tweetForm.serialize(),
+    success :(resp)=>{
+      console.log('test',resp);
+    },
+    error:()=>{
+      console.error();
+    },
+  });
+
+});
+
+
+
+
+
+
+
 
 // const $tweet = $(` <section class="tweet-container">
 //     <article id="tweet">
@@ -86,4 +121,9 @@ renderTweets(mockDb);
 
 // Test / driver code (temporary)
 // console.log($tweet); // to see what it looks like
+
+
+
+
+
 
