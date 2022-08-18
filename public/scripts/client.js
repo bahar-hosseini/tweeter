@@ -12,7 +12,7 @@
 
 const createTweetElement = (tweetObj) =>{
 // escape function to prevent xxs
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -59,6 +59,10 @@ const renderTweets = (arrTweetObj)=>{
 /**
  * Post request using ajax
  **/
+
+ $('.warning').hide();
+ $('.error').hide();
+
 const $tweetForm = $('form');
 $tweetForm.submit((event)=>{
   event.preventDefault();
@@ -67,10 +71,12 @@ $tweetForm.submit((event)=>{
   const url = $tweetForm.attr("action");
 
   if (!$inputTerm) {
-    alert("Please write sth before submit ⚠️");
+    $('.error').slideDown(400);
   }
-  if ($inputTerm.length > 50) {
-    alert("Your tweet is too long");
+  if ($inputTerm.length > 139) {
+    $('.warning').slideDown(100);
+    $('.warning').fix();
+   
   }
 
 

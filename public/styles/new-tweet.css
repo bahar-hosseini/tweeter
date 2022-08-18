@@ -98,3 +98,20 @@ font-size:1.5em ;
   font-size: 1rem;
   margin-bottom: -30%;
 }
+
+.warning {
+  color: #D63301;
+  background-color: #FFCCBA;
+  border: 1px solid #D63301;
+  font-size: 1.5rem;
+text-align: center;
+ justify-content: center;
+}
+.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+  border: 1px solid #D8000C;
+font-size: 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
