@@ -5,35 +5,13 @@ $(document).ready(function() {
   const $input = $('#tweet-text');
   const $counter = $('.counter');
   $input.keyup(function() {
-    numberOfchar += 1;
-    let characterRemaining = 140 - numberOfchar;
 
-    numberOfchar > 140 ? $counter.text(characterRemaining) && $counter.addClass('counterRed') : $counter.text(numberOfchar);
+    // console.log($(this).val().length)
+
+
+
+    $(this).val().length > 140 ? $counter.text(140 - $(this).val().length) && $counter.addClass('counterRed') : $counter.text($(this).val().length) && $counter.removeClass('counterRed');
   
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const $button = $('button');
-// $button.on('click',(e)=>{
-
-//   const $input = $('#tweet-text');
-//   const value = $input.val();
-//   const $li = $(`<li>${value}</li>`).text(value);
-//   const $mainList = $(`main`);
-//   $mainList.prepend($li);
-//   $input.val('');
-//   $input.focus();
-// });
