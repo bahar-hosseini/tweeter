@@ -24,5 +24,7 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 
 !["Screenshot of URLs page"](https://github.com/bahar-hosseini/tweeter/blob/master/docs/Dimensions-Ipad-Air%20.png)
-!["Screenshot of register page"](https://github.com/bahar-hosseini/tweeter/blob/master/docs/1024-1280.png)
+* Responsive Design for small size screen*
+
 !["Screenshot of register page"](https://github.com/bahar-hosseini/tweeter/blob/master/docs/Screen%20Shot%202022-08-18%20at%2011.41.56%20PM.png)
+* Responsive Design for large size screen*
