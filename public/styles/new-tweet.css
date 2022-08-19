@@ -1,29 +1,25 @@
-main button{
-background-color: #4056A1;
-color:#FFFFFF;
-margin : 0 1em 2em 1.5em;
-border-radius: 5px;
-border-color: #4056A1;
-font-family: 'Bungee', cursive;
-font-size: 1rem;
-padding: 0.5em;
-flex-grow: 2
+main button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  margin: 0 1em 2em 1.5em;
+  border-radius: 5px;
+  border-color: #4056A1;
+  font-family: "Bungee", cursive;
+  font-size: 1rem;
+  padding: 0.5em;
+  flex-grow: 2;
 }
 
-.counter{
-  /* justify-content: flex-end; */
-  margin-left:80%;
-  font-family: 'Bungee', cursive;
+.counter {
+  margin-left: 80%;
+  font-family: "Bungee", cursive;
   color: #545149;
 }
 
-.counterRed{
+.counterRed {
+  margin-left: 80%;
+  font-family: "Bungee", cursive;
   color: #F03C1D;
-}
-
-.new-tweet{
-/* position: absolute;
-top: 500px; */
 }
 
 #tweet-text {
@@ -31,95 +27,253 @@ top: 500px; */
   border-bottom: 3px solid #545149;
   background-color: #f4f1ec;
   padding-top: 1.25em;
-  margin :1em;
-  /* margin-bottom: .75em; */
+  margin: 1em;
   resize: none;
   width: 75vw;
   outline: none;
 }
 
-.tweet-container{
-  /* position: absolute; */
-  margin :0 1em;
-  /* top: 800px; */
+.tweet-container {
+  margin: 0 1em;
   border: 3px solid #545149;
   width: 75vw;
   margin: 1em;
 }
-
-.tweet-container:hover{
+.tweet-container:hover {
   box-shadow: 20px 20px 10px grey;
 }
-
-
-
-.tweet-container p{
-  /* padding: 1em 0em 0 1em; */
+.tweet-container p {
   overflow-wrap: break-word;
   margin: 1em 1.5em;
-  /* align-items: center; */
   border-bottom: 3px solid #545149;
   width: 90%;
 }
-
-main i {
-float: right;
-padding: 0 0.25em 0.25em 0.25em;
-
-}
-
-main i:hover{
-color: #DAA520;
-
-}
-
-article h3 {
-  font-size: 1.5rem;
-  margin:0.5em 0.5rem;
-}
-
-.font-awesome{
-  margin: 0.5em 2.5em 1.5em 0;
-}
-
-section > ul{
- list-style-type: none;
-}
-
-.userInfo h3{
-font-size:1.5em ;
-}
-
-.userInfo img{
-  height: 5%;
-  width: 5%;
-}
-.userInfo a{
-margin-right: 0.5em;
- color: #CBCDDC;
-float: right;
-  /* margin-left: 35em;
-  marg */
-  font-size: 1.25rem;
-}
-.tweet-container .timeago{
+.tweet-container .timeago {
   font-size: 1rem;
   margin-bottom: 1em;
 }
+.tweet-container .userInfo h3 {
+  font-size: 1.5rem;
+  margin: 0.5em 0.5rem;
+}
+.tweet-container .userInfo img {
+  height: 5%;
+  width: 5%;
+}
+.tweet-container .userInfo a {
+  margin-right: 0.5em;
+  color: #CBCDDC;
+  float: right;
+  font-size: 1.25rem;
+}
+
+.font-awesome {
+  margin: 0.5em 2.5em 1.5em 0;
+}
+.font-awesome i {
+  float: right;
+  padding: 0 0.25em 0.25em 0.25em;
+}
+.font-awesome i:hover {
+  color: #DAA520;
+}
 
 .warning {
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
   color: #D63301;
   background-color: #FFCCBA;
   border: 1px solid #D63301;
+}
+
+.error {
   border-radius: 5px;
   font-size: 1.5rem;
-text-align: center;
-}
-.error {
+  text-align: center;
   color: #D8000C;
   background-color: #FFBABA;
   border: 1px solid #D8000C;
-  border-radius: 5px;
-font-size: 1.5rem;
-  text-align: center;
+}
+
+@media only screen and (min-width: 1289px) {
+  section {
+    font-size: 1rem;
+  }
+
+  nav {
+    margin-bottom: 3em;
+    height: 90px;
+  }
+  nav span {
+    font-size: 1.5rem;
+  }
+  nav p {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+  }
+
+  .layout {
+    display: flex;
+    margin: 4em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  header {
+    height: 30vh;
+    width: 30vw;
+    margin: 2em;
+  }
+  header h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: #FFFFFF;
+  }
+  header img {
+    align-items: center;
+    text-align: center;
+    width: 7vw;
+    height: auto;
+    margin: 0em;
+    padding: 0em;
+  }
+
+  #tweet-text {
+    padding-top: 1.25em;
+    margin: 1em;
+    width: 35vw;
+  }
+
+  .tweet-container {
+    margin: 0 1em;
+    width: 35vw;
+    margin: 1em;
+  }
+  .tweet-container p {
+    margin: 1em 1.5em;
+    font-size: 1rem;
+  }
+  .tweet-container .userInfo h3 {
+    font-size: 1rem;
+  }
+  .tweet-container .userInfo img {
+    height: 5%;
+    width: 5%;
+  }
+  .tweet-container .userInfo a {
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  section {
+    font-size: 1rem;
+  }
+
+  nav {
+    margin-bottom: 3em;
+    height: 90px;
+  }
+  nav span {
+    font-size: 1.5rem;
+  }
+  nav p {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+  }
+
+  .layout {
+    display: flex;
+    margin: 4em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  header {
+    height: 30vh;
+    width: 30vw;
+    margin: 2em;
+  }
+  header h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: #FFFFFF;
+  }
+  header img {
+    align-items: center;
+    text-align: center;
+    width: 7vw;
+    height: auto;
+    margin: 0em;
+    padding: 0em;
+  }
+
+  #tweet-text {
+    padding-top: 1.25em;
+    margin: 1em;
+    width: 35vw;
+  }
+
+  .tweet-container {
+    margin: 0 1em;
+    width: 35vw;
+    margin: 1em;
+  }
+  .tweet-container p {
+    margin: 1em 1.5em;
+    font-size: 1rem;
+  }
+  .tweet-container .userInfo h3 {
+    font-size: 1rem;
+  }
+  .tweet-container .userInfo img {
+    height: 5%;
+    width: 5%;
+  }
+  .tweet-container .userInfo a {
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    background-color: transparent;
+  }
+
+  .container {
+    font-family: "Source Sans Pro", sans-serif;
+    width: 90%;
+    background-color: #f4f1ec;
+    padding: 1.5em;
+    margin: 1.5em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  nav {
+    background-color: transparent;
+  }
+
+  .container {
+    font-family: "Source Sans Pro", sans-serif;
+    width: 90%;
+    background-color: #f4f1ec;
+    padding: 1.5em;
+    margin: 1.5em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  nav {
+    background-color: transparent;
+  }
+
+  .container {
+    font-family: "Source Sans Pro", sans-serif;
+    width: 90%;
+    background-color: #f4f1ec;
+    padding: 1.5em;
+    margin: 1.5em;
+  }
 }

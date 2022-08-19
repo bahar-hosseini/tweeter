@@ -60,15 +60,15 @@ const renderTweets = (arrTweetObj)=>{
  * Post request using ajax
  **/
 
- $('.warning').hide();
- $('.error').hide();
+$('.warning').hide();
+$('.error').hide();
 
 const $tweetForm = $('form');
 $tweetForm.submit((event)=>{
   event.preventDefault();
   const $textAreaField = $('#tweet-text');
   const $inputTerm = $textAreaField.val();
-  const url = $tweetForm.attr("action");
+  // const url = $tweetForm.attr("action");
 
   if (!$inputTerm) {
     $('.error').slideDown(400);
@@ -77,16 +77,13 @@ $tweetForm.submit((event)=>{
   if ($inputTerm.length > 139) {
     $('.warning').slideDown(100);
     $('.warning').fix();
-   
   }
-
-  
 
   $.ajax({
     type: 'POST',
     url:'/tweets',
     data: $tweetForm.serialize(),
-    success :(res)=>{
+    success :()=>{
       window.location.reload(true);
     },
     error:()=>{
@@ -110,7 +107,6 @@ $(document).ready(function() {
       success :(resp)=>{
         
         renderTweets(resp);
-        $("time.timeago").timeago();
       },
       error:(err)=>{
         console.log(err);

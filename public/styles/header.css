@@ -1,24 +1,17 @@
-header{
+header {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height:460px;
+  height: 460px;
   width: 100vw;
-  flex-direction:column;
+  flex-direction: column;
   background-color: #d89820;
   background-image: url("https://www.transparenttextures.com/patterns/cloth-alike.png");
 }
-
-header h2{
-margin: 0;
+header h2 {
+  margin: 0;
 }
-header img{
-padding-top: 5em;
+header img {
+  padding-top: 5em;
 }
-
-
-
-
-
-

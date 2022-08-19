@@ -1,0 +1,30 @@
+//variavles scss
+$main-bgcolor-header:#d89820;
+
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height:460px;
+  width: 100vw;
+  flex-direction:column;
+  background-color: $main-bgcolor-header;
+  background-image: url("https://www.transparenttextures.com/patterns/cloth-alike.png");
+  h2{
+    margin: 0;
+    }
+  img{
+    padding-top: 5em;
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,328 @@
+//variables
+$font-color-main:#545149;
+$font-color-second:#FFFFFF;
+$bg-color:#f4f1ec;
+$btn-color:#4056A1;
+$font-family-main: 'Source Sans Pro', sans-serif;
+$font-family-bungee:'Bungee', cursive;
+$hover-color: #DAA520;
+
+
+// sunmit btn 
+main button{
+background-color:$btn-color;
+color:$font-color-second;
+margin : 0 1em 2em 1.5em;
+border-radius: 5px;
+border-color: #4056A1;
+font-family: $font-family-bungee;
+font-size: 1rem;
+padding: 0.5em;
+flex-grow: 2
+}
+
+// character counter
+@mixin counter{
+  margin-left:80%;
+  font-family: $font-family-bungee;
+}
+.counter{
+@include counter;
+  color: $font-color-main;
+}
+.counterRed{
+  @include counter;
+  color: #F03C1D;
+}
+
+// input - textarea
+#tweet-text {
+  border: none;
+  border-bottom: 3px solid #545149;
+  background-color:$bg-color;
+  padding-top: 1.25em;
+  margin :1em;
+  resize: none;
+  width: 75vw;
+  outline: none;
+}
+
+//each tweet container
+.tweet-container{
+  margin :0 1em;
+  border: 3px solid #545149;
+  width: 75vw;
+  margin: 1em;
+  &:hover{
+  box-shadow: 20px 20px 10px grey;
+  }
+  //content of the tweet
+  p{
+    overflow-wrap: break-word;
+    margin: 1em 1.5em;
+    border-bottom: 3px solid #545149;
+    width: 90%;
+  }
+
+  .timeago{
+    font-size: 1rem;
+    margin-bottom: 1em;
+  }
+  
+
+//information of each user
+  .userInfo{
+    h3 {
+      font-size: 1.5rem;
+      margin:0.5em 0.5rem;
+    }
+      img{
+        height: 5%;
+        width: 5%;
+      }
+      a{
+        margin-right: 0.5em;
+         color: #CBCDDC;
+        float: right;
+        font-size: 1.25rem;
+        }
+  }
+  
+}
+
+//like & reply & flag
+.font-awesome{
+  margin: 0.5em 2.5em 1.5em 0;
+  i {
+    float: right;
+    padding: 0 0.25em 0.25em 0.25em;
+    &:hover{
+      color:$hover-color;
+      }
+    }
+}
+
+
+@mixin notification {
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.warning {
+  @include notification;
+  color: #D63301;
+  background-color: #FFCCBA;
+  border: 1px solid #D63301;
+}
+.error {
+  @include notification;
+  color: #D8000C;
+  background-color: #FFBABA;
+  border: 1px solid #D8000C;
+}
+
+
+
+///////////////////////// Media Query /////////////////////////
+
+@media only screen and (min-width: 1289px) {
+    section{
+      font-size: 1rem;
+    }
+    nav{
+      span{
+        font-size: 1.5rem;
+      }
+      p{
+        font-size: 1rem;
+        margin-bottom: 0.5em;
+      }
+      margin-bottom: 3em;
+      height: 90px;
+    }
+  .layout{
+    display: flex;
+    margin: 4em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: space-between;
+    
+  }
+  
+     header {
+      height: 30vh;
+      width: 30vw;
+      margin: 2em;
+      h2{
+        margin: 0;
+        font-size: 1rem;
+        color: $font-color-second;
+        }
+      img{
+        align-items: center;
+        text-align: center;
+       width: 7vw;
+       height: auto;
+       margin: 0em;
+  padding: 0em;
+        }
+    }
+  
+  // input - textarea
+  #tweet-text {
+    padding-top: 1.25em;
+    margin :1em;
+    width: 35vw;
+  }
+  
+  //each tweet container
+  .tweet-container{
+    margin :0 1em;
+    width: 35vw;
+    margin: 1em;
+    //content of the tweet
+    p{
+      margin: 1em 1.5em;
+      font-size: 1rem;
+    }
+    
+  //information of each user
+    .userInfo{
+      h3 {
+        font-size: 1rem;
+      }
+        img{
+          height: 5%;
+          width: 5%;
+        }
+        a{
+          font-size: 0.75rem;
+          }
+    }
+    
+  }
+  
+  
+
+  }
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) { 
+  section{
+    font-size: 1rem;
+  }
+  nav{
+    span{
+      font-size: 1.5rem;
+    }
+    p{
+      font-size: 1rem;
+      margin-bottom: 0.5em;
+    }
+    margin-bottom: 3em;
+    height: 90px;
+  }
+.layout{
+  display: flex;
+  margin: 4em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:flex-start;
+  justify-content: space-between;
+  
+}
+
+   header {
+    height: 30vh;
+    width: 30vw;
+    margin: 2em;
+    h2{
+      margin: 0;
+      font-size: 1rem;
+      color: $font-color-second;
+      }
+    img{
+      align-items: center;
+      text-align: center;
+     width: 7vw;
+     height: auto;
+     margin: 0em;
+padding: 0em;
+      }
+  }
+
+// input - textarea
+#tweet-text {
+  padding-top: 1.25em;
+  margin :1em;
+  width: 35vw;
+}
+
+//each tweet container
+.tweet-container{
+  margin :0 1em;
+  width: 35vw;
+  margin: 1em;
+  //content of the tweet
+  p{
+    margin: 1em 1.5em;
+    font-size: 1rem;
+  }
+  
+//information of each user
+  .userInfo{
+    h3 {
+      font-size: 1rem;
+    }
+      img{
+        height: 5%;
+        width: 5%;
+      }
+      a{
+        font-size: 0.75rem;
+        }
+  }
+  
+}
+
+
+}
+ 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav{
+    background-color: transparent;
+   }
+  .container{
+    font-family:$font-family-main;
+    width: 90%;
+    background-color:$bg-color;
+    padding: 1.5em;
+    margin: 1.5em;
+   }
+ }
+ 
+@media only screen and (min-width: 480px) and (max-width: 768px) { 
+  nav{
+    background-color: transparent;
+   }
+   .container{
+    font-family:$font-family-main;
+    width: 90%;
+    background-color:$bg-color;
+    padding: 1.5em;
+    margin: 1.5em;
+   }
+}
+ 
+@media only screen and (max-width: 480px) { 
+  nav{
+    background-color: transparent;
+   }
+   .container{
+    font-family:$font-family-main;
+    width: 90%;
+    background-color:$bg-color;
+    padding: 1.5em;
+    margin: 1.5em;
+   }
+}

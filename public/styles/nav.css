@@ -1,4 +1,4 @@
-nav{
+nav {
   display: flex;
   align-items: center;
   height: 120px;
@@ -7,28 +7,22 @@ nav{
   position: fixed;
   top: 0;
   overflow: hidden;
-  color:#FFFFFF;
+  color: #FFFFFF;
   padding: 0 1.5em;
-  /* justify-content: space-between; */
-
   z-index: 1;
 }
-
-nav span{
-  font-family: 'Bungee', cursive;
+nav span {
+  font-family: "Bungee", cursive;
   flex-grow: 1;
 }
-nav > div > p{
-  font-family: 'Source Sans Pro', sans-serif;
-margin-bottom: 0;
-
-
+nav div p {
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 0;
 }
-
-nav > div > i{
-color: #F03C1D;
-position: absolute;
-right: 9%;
-top: 80%;
-font-size: 0.5rem;
+nav div i {
+  color: #F03C1D;
+  position: absolute;
+  right: 9%;
+  top: 80%;
+  font-size: 0.5rem;
 }
