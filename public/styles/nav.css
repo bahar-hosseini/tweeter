@@ -14,15 +14,18 @@ nav {
 nav span {
   font-family: "Bungee", cursive;
   flex-grow: 1;
+  font-size: 1.5 rem;
 }
 nav div p {
   font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5 rem;
+  margin-top: 0em;
   margin-bottom: 0;
 }
 nav div i {
   color: #F03C1D;
   position: absolute;
-  right: 9%;
-  top: 80%;
-  font-size: 0.5rem;
+  left: 90%;
+  padding-bottom: 2em;
+  font-size: 1rem;
 }
