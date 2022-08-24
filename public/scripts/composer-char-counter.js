@@ -1,11 +1,28 @@
 $(document).ready(function() {
 
-  const $input = $('#tweet-text');
+  
+  const $inputArea = $('#tweet-text');
   const $counter = $('.counter');
-  
-  $input.keyup(function() {
-    $(this).val().length > 140 ? $counter.text(140 - $(this).val().length) && $counter.addClass('counterRed') : $counter.text($(this).val().length) && $counter.removeClass('counterRed');
-  
+ 
+  $inputArea.on('input',function() {
+
+    const $input = $(this);
+
+    const len = $input.val().length;
+    const charLeft = 140 - len;
+
+    $counter.text(charLeft);
+
+    if (charLeft < 0) {
+      $counter.addClass('counterRed');
+    } else {
+      $counter.removeClass('counterRed');
+    }
+
   });
+
+
+
+
 });
 

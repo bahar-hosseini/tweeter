@@ -22,9 +22,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 
 ## Final Product
+!["Screenshot of register page"](https://github.com/bahar-hosseini/tweeter/blob/master/docs/1024-1280.png)
+* Responsive Design for large size screen*
 
 !["Screenshot of URLs page"](https://github.com/bahar-hosseini/tweeter/blob/master/docs/Dimensions-Ipad-Air%20.png)
 * Responsive Design for small size screen*
 
-!["Screenshot of register page"](https://github.com/bahar-hosseini/tweeter/blob/master/docs/1024-1280.png)
-* Responsive Design for large size screen*
